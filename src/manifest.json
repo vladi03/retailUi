@@ -1,0 +1,23 @@
+{
+    "name": "Online Retail Store",
+    "short_name": "Retail Store",
+	"scope": "/",
+	"start_url": "/index.html",
+	"service_worker": "sw.js",
+    "icons": [
+        {
+            "src": "/retail-shop-flat-icon_small.png",
+            "sizes": "200x200",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/retail-shop-flat-icon.jpg",
+            "sizes": "736x736",
+            "type": "image/jpg"
+        }
+    ],
+    "theme_color": "#626166",
+    "background_color": "#ffffff",
+    "display": "standalone"
+}
