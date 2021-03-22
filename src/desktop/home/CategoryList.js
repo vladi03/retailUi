@@ -36,11 +36,11 @@ export const CategoryListComponent = ({siteCategories})=> {
                                     {category.category}
                                 </Typography>
 
-                                {category.catalogList.map((catalog)=> {
+                                {category.catalogList.slice(0,3).map((catalog)=> {
 
                                     // noinspection JSUnresolvedVariable
                                     return (
-                                        <div style={{marginBottom: 4}}>
+                                        <div style={{marginBottom: 4}} key={catalog._id}>
                                             <Link href="#" onClick={preventDefault}>
                                                 {catalog.shortDesc}
                                             </Link>

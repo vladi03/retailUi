@@ -11,7 +11,7 @@ describe("main page create", ()=> {
 
     it("first category has catalog list", ()=>{
         assert.ok(result[0].catalogList.length > 0, " has catalog items");
-        assert.strictEqual(result[0].catalogList.length, 3, "has catalog items");
+        assert.strictEqual(result[0].catalogList.length, 5, "has catalog items");
         assert.strictEqual(result[0].sort, 2, "sort item 1");
         assert.strictEqual(result[0].category, "Bedroom Suites", "sort item 1 name");
     });
