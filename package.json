@@ -27,6 +27,7 @@
     "react-router-dom": "^5.2.0"
   },
   "dependencies": {
-    "esm": "^3.2.25"
+    "esm": "^3.2.25",
+    "pic-ratio-fill": "^0.3.17"
   }
 }
