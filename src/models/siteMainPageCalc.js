@@ -1,7 +1,7 @@
 
 export const createSiteCategoriesModel= ({categories, catalogs})=> {
 
-    return categories.filter((cat) => !cat.systemOnly).map((cat) => {
+    return categories.map((cat) => {
         const catalogList = catalogs.filter((catalog) => {
             return catalog.categories.filter(
                 (inCat) => inCat._id === cat._id).length > 0;

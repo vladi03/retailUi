@@ -12,7 +12,7 @@ export const CategoryListComponent = ({siteCategories})=> {
     return (
         <Fragment>
             <ul className={classes.container}>
-            {siteCategories.map((category)=> {
+            {siteCategories.filter((cate) => !cate.systemOnly).map((category)=> {
 
                 const preventDefault = (event) => event.preventDefault();
 

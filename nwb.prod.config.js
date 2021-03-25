@@ -8,7 +8,9 @@ module.exports = {
             {from: './src/retail-shop-flat-icon_small.png'},
             {from: './src/retail-shop-flat-icon.jpg'},
             {from: './src/manifest.json'},
-            {from: './src/sw.js'}
+            {from: './src/sw.js'},
+            {from: './src/carouselSlide.css'},
+            {from: './src/darby_logo_wide.jpg'}
         ],
         define: {
             'process.env.AUTH_DOMAIN': JSON.stringify(process.env.AUTH_DOMAIN),

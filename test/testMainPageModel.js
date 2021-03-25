@@ -6,7 +6,7 @@ describe("main page create", ()=> {
     const result = createSiteCategoriesModel(siteData,3);
     it("mock data ok", ()=>{
         assert.strictEqual(siteData.catalogs.length, 15);
-        assert.strictEqual(result.length, 4);
+        assert.strictEqual(result.length, 5);
     });
 
     it("first category has catalog list", ()=>{

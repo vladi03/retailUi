@@ -7,6 +7,9 @@ import {siteModel} from "../../models/siteModel";
 import {connectArray} from "../../utility/helpers";
 //import {catalogModel} from "../../models/home/catalogModel";
 import {CategoryList} from "./CategoryList";
+import {CatalogList} from "./CatalogList";
+import { Divider } from "@material-ui/core";
+import { Carousel } from "./Carousel";
 
 export const HomeMainComponent = ({siteDataInitLoaded, onSiteDataInit }) => {
     useEffect(()=> {
@@ -27,10 +30,21 @@ export const HomeMainComponent = ({siteDataInitLoaded, onSiteDataInit }) => {
 
                 }}
 
-
             />
             </div>
+            <div style={{display: "flex", alignItems: "stretch"}}>
+            <Carousel />
+            <div style={{
+                marginRight: 5, marginLeft: 10, flex: "auto",
+                background: "rgb(176 175 178)",
+                borderRadius: 10
+            }}>
+
+            </div>
+            </div>
             <CategoryList />
+            <Divider variant="middle" />
+            <CatalogList categoryId={"6059569ec9d6c1ae352412bc"} />
         </Fragment>
     );
 };
