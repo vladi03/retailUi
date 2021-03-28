@@ -7,7 +7,6 @@ const CarouselComponent = ({siteCategories}) => {
         const timerRef = setTimeout(()=> {
             const nextIndex = (category && activeIndex < (category.catalogList.length - 1)) ?
                 activeIndex + 1 : 0;
-            console.log(nextIndex);
             setActiveIndex(nextIndex);
         },4000);
 

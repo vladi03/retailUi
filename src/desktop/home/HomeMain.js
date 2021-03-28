@@ -1,22 +1,22 @@
 import React, {Fragment, useEffect} from "react";
-//import { useAuth0 } from "@auth0/auth0-react";
 import {AppBarTitleAddSearch} from "../../utility/components/AppBarTitle";
+import {makeStyles} from "@material-ui/core/styles";
 import {OpenWith} from "@material-ui/icons";
 import {siteModel} from "../../models/siteModel";
-//import {CatalogTable} from "../catalog/CatalogTable";
 import {connectArray} from "../../utility/helpers";
-//import {catalogModel} from "../../models/home/catalogModel";
 import {CategoryList} from "./CategoryList";
 import {CatalogList} from "./CatalogList";
 import { Divider } from "@material-ui/core";
 import { Carousel } from "./Carousel";
+import {InfoBox} from "./InfoBox";
+
 
 export const HomeMainComponent = ({siteDataInitLoaded, onSiteDataInit }) => {
     useEffect(()=> {
         if(!siteDataInitLoaded)
             onSiteDataInit();
     });
-
+    const classes = useStyles();
     return (
         <Fragment>
             <div style={{backgroundColor:"#101010"}}>
@@ -32,15 +32,9 @@ export const HomeMainComponent = ({siteDataInitLoaded, onSiteDataInit }) => {
 
             />
             </div>
-            <div style={{display: "flex", alignItems: "stretch"}}>
-            <Carousel />
-            <div style={{
-                marginRight: 5, marginLeft: 10, flex: "auto",
-                background: "rgb(176 175 178)",
-                borderRadius: 10
-            }}>
-
-            </div>
+            <div className={classes.titleBar}>
+                <Carousel />
+                <InfoBox />
             </div>
             <CategoryList />
             <Divider variant="middle" />
@@ -50,3 +44,13 @@ export const HomeMainComponent = ({siteDataInitLoaded, onSiteDataInit }) => {
 };
 
 export const HomeMain = connectArray(HomeMainComponent,[siteModel]);
+
+const useStyles = makeStyles({
+    titleBar: {
+        display: "flex",
+        alignItems: "stretch",
+        "@media (max-width: 1100px)": {
+            display: "contents"
+        }
+    }
+});
