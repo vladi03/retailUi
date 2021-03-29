@@ -4,6 +4,7 @@ import {siteModel} from "../../models/siteModel";
 import {makeStyles} from "@material-ui/core/styles";
 import {Paper, Typography, Link} from "@material-ui/core";
 import {PicRatioView} from "pic-ratio-fill";
+//import {Link} from "react-router-dom";
 
 export const CategoryListComponent = ({siteCategories})=> {
     const classes = useStyle();
@@ -41,7 +42,9 @@ export const CategoryListComponent = ({siteCategories})=> {
                                     // noinspection JSUnresolvedVariable
                                     return (
                                         <div style={{marginBottom: 4}} key={catalog._id}>
-                                            <Link href="#" onClick={preventDefault}>
+                                            <Link href={`/#/catalogItem/${catalog._id}/${category._id}`}
+
+                                                  >
                                                 {catalog.shortDesc}
                                             </Link>
                                         </div>
@@ -49,7 +52,8 @@ export const CategoryListComponent = ({siteCategories})=> {
                                 })}
 
                                 <Typography variant="h6" style={{color: "#1a8bdf"}} >
-                                    <Link href="#" onClick={preventDefault}>
+                                    <Link href={`/#/category/${category._id}`}
+                                          >
                                     Shop all {category.category}
                                     </Link>
                                 </Typography>
@@ -88,7 +92,8 @@ const useStyle = makeStyles({
     },
     itemContainer: {
         //padding: 15,
-        height: "calc(100% - 0px)"
+        height: "calc(100% - 0px)",
+        background: "#f1f3f5"
     },
     itemImageBox: {
         width: "100%",

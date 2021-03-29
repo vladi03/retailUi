@@ -42,7 +42,9 @@ const CatalogListComponent = ({siteCategories, categoryId}) => {
                             </div>
                             <div className={classes.itemText}>
                                 <Typography variant="h6" style={{color: "#1a8bdf"}} >
-                                    {catalog.shortDesc}
+                                    <Link href={`/#/catalogItem/${catalog._id}/${categoryId}`}>
+                                        {catalog.shortDesc}
+                                    </Link>
                                 </Typography>
                                 <Typography variant="p" >
                                     {catalog.description}
@@ -94,7 +96,8 @@ const useStyle = makeStyles({
     },
     itemContainer: {
         //padding: 15,
-        height: "calc(100% - 0px)"
+        height: "calc(100% - 0px)",
+        background: "#f1f3f5",
     },
     itemImageBox: {
         width: "100%",

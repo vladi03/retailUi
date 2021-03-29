@@ -1,7 +1,7 @@
 /*global siteData */
 import React from "react";
 import { AppBar, Toolbar, IconButton, Typography,
-     Button, TextField, InputAdornment } from "@material-ui/core";
+     Button, TextField, InputAdornment, Link } from "@material-ui/core";
 import { makeStyles} from "@material-ui/core/styles";
 import { Add as AddIcon, Search} from "@material-ui/icons";
 import {SearchTextBox} from "./SearchTextBox";
@@ -86,7 +86,7 @@ const useStyles = makeStyles((theme) => {
 
 export const AppBarTitleAddSearchComponent =
     ({ title, LeftIcon, onSearchChange, hideSearch, onAdd,
-         addLabel, children, childHasTextBox,
+         addLabel, children, childHasTextBox, linkUrl,
          onAvatarClick, imageUrl, backgroundColor, useBigSearch}) => {
 
     const isMobile = useIsMobile();
@@ -96,7 +96,9 @@ export const AppBarTitleAddSearchComponent =
                 style={{backgroundColor}}
                 position="static">
             <Toolbar variant="dense">
+                <Link href={linkUrl || "#"}>
                 {imageUrl && <img src={imageUrl} height={40} />}
+                </Link>
                 <span className={childHasTextBox ? classes.labelTitleWithTextBox : classes.labelTitle}>
                     {/*  <IconButton className={classes.menuButton}
                                 color="inherit"

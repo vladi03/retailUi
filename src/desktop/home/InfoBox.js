@@ -2,7 +2,7 @@ import React from "react";
 import {siteModel} from "../../models/siteModel";
 import {connectArray} from "../../utility/helpers";
 import {makeStyles} from "@material-ui/core/styles";
-import {LocationOn} from "@material-ui/icons"
+//import {LocationOn} from "@material-ui/icons"
 import {hoursToView} from "../../models/hoursHelper";
 
 const InfoBoxComponent = ({locations})=> {
@@ -23,8 +23,11 @@ const InfoBoxComponent = ({locations})=> {
             <div className={classes.locationListContainer}>
                 {locations.map((location)=> {
                     const listOfHours = hoursToView(location.hours);
+                    // noinspection JSUnresolvedVariable
                     return (
-                        <div className={classes.locationItemContainer}>
+                        <div className={classes.locationItemContainer}
+                             key={location._id}
+                        >
                             <div >
                                 <a href={location.mapLink}
                                    target="_new">

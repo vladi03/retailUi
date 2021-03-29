@@ -14,7 +14,8 @@ import {PaymentOptions} from "../desktop/home/PaymentOptions";
 //import {CategoryMaintenance} from "../desktop/home/CategoryMaintenance";
 //import {setRouteComponent} from "../utility/helpers";
 import {PopupError} from "../utility/components/PopupError";
-//import {LocationMaintenance} from "../desktop/company/LocationMaintenance";
+import {CatalogItem} from "../desktop/home/CatalogItem";
+import {CategorySelect} from "../desktop/home/CategorySelect";
 
 // noinspection JSUnusedLocalSymbols
 export class RouteComponent extends React.Component {
@@ -58,6 +59,17 @@ export class RouteComponent extends React.Component {
                                 <Route
                                       exact path="/"
                                       component={HomeMain} />
+                                <Route
+                                    exact path="/catalogItem/:catalogId/:categoryId?"
+                                    component={CatalogItem} />
+                                <Route
+                                    exact path="/category/:categoryId"
+                                    render={() => {
+                                        window.scrollTo(0,0);
+                                        return (<CategorySelect />)
+                                    }}
+                                />
+
                                 <Route
                                     exact path="/payment"
                                     component={PaymentOptions}

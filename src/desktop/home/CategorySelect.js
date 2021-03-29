@@ -9,29 +9,40 @@ import {CatalogList} from "./CatalogList";
 import { Divider } from "@material-ui/core";
 import { Carousel } from "./Carousel";
 import {InfoBox} from "./InfoBox";
-import {SiteHeader} from "./SiteHeader";
+import {useParams} from "react-router-dom";
 
-export const HomeMainComponent = ({siteDataInitLoaded, onSiteDataInit }) => {
+
+export const CategorySelectComponent = ({siteDataInitLoaded, onSiteDataInit }) => {
     useEffect(()=> {
         if(!siteDataInitLoaded)
             onSiteDataInit();
     });
     const classes = useStyles();
+    const { categoryId } = useParams();
     return (
         <Fragment>
-            <SiteHeader />
-            <div className={classes.titleBar}>
-                <Carousel />
-                <InfoBox />
+            <div style={{backgroundColor:"#101010"}}>
+                <AppBarTitleAddSearch
+                    title=""
+                    LeftIcon={OpenWith}
+                    imageUrl="logo3.png"
+                    backgroundColor={"#626166"}
+                    useBigSearch={false}
+                    onSearchChange={(value) => {
+
+                    }}
+
+                />
             </div>
-            <CategoryList />
+
+            <CatalogList categoryId={categoryId} />
             <Divider variant="middle" />
-            <CatalogList categoryId={"6059569ec9d6c1ae352412bc"} />
+            <CategoryList />
         </Fragment>
     );
 };
 
-export const HomeMain = connectArray(HomeMainComponent,[siteModel]);
+export const CategorySelect = connectArray(CategorySelectComponent,[siteModel]);
 
 const useStyles = makeStyles({
     titleBar: {
