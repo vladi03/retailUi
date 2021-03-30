@@ -12,7 +12,7 @@ export const SiteHeader = () => {
                 imageUrl="logo3.png"
                 backgroundColor={"#626166"}
                 useBigSearch={false}
-                linkUrl={"/#/"}
+                linkUrl={"#/"}
                 onSearchChange={(value) => {
 
                 }}

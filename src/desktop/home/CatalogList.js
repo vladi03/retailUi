@@ -42,7 +42,7 @@ const CatalogListComponent = ({siteCategories, categoryId}) => {
                             </div>
                             <div className={classes.itemText}>
                                 <Typography variant="h6" style={{color: "#1a8bdf"}} >
-                                    <Link href={`/#/catalogItem/${catalog._id}/${categoryId}`}>
+                                    <Link href={`#/catalogItem/${catalog._id}/${categoryId}`}>
                                         {catalog.shortDesc}
                                     </Link>
                                     <span style={{marginLeft: 10}} >${catalog.unitPrice}</span>

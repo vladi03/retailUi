@@ -42,7 +42,7 @@ export const CategoryListComponent = ({siteCategories})=> {
                                     // noinspection JSUnresolvedVariable
                                     return (
                                         <div style={{marginBottom: 4}} key={catalog._id}>
-                                            <Link href={`/#/catalogItem/${catalog._id}/${category._id}`}
+                                            <Link href={`#/catalogItem/${catalog._id}/${category._id}`}
 
                                                   >
                                                 {catalog.shortDesc}
@@ -52,7 +52,7 @@ export const CategoryListComponent = ({siteCategories})=> {
                                 })}
 
                                 <Typography variant="h6" style={{color: "#1a8bdf"}} >
-                                    <Link href={`/#/category/${category._id}`}
+                                    <Link href={`#/category/${category._id}`}
                                           >
                                     Shop all {category.category}
                                     </Link>
