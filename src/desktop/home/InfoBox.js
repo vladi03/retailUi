@@ -2,15 +2,15 @@ import React from "react";
 import {siteModel} from "../../models/siteModel";
 import {connectArray} from "../../utility/helpers";
 import {makeStyles} from "@material-ui/core/styles";
-//import {LocationOn} from "@material-ui/icons"
 import {hoursToView} from "../../models/hoursHelper";
+import {H1Title} from "./Titles";
 
 const InfoBoxComponent = ({locations})=> {
     const classes = useStyles();
 
     return (
         <div className={classes.mainContainer}>
-            <div className={classes.title}>Home of Affordable Furniture</div>
+            <H1Title>Home of Affordable Furniture</H1Title>
             <div className={classes.shortArticle}>
                 Serving the south side area of Atlanta for 50 years...
             </div>

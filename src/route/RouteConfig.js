@@ -6,7 +6,7 @@ import { GlobalProviders} from "../GlobalProviders";
 //import { LoggedOut } from "../desktop/accounts/LoggedOut";
 //import {initAuthStore} from "../models/accounts/userAuthStore";
 import {HomeMain} from "../desktop/home/HomeMain";
-import {FullMenuNav} from "../desktop/home/FullMenuNav";
+//import {FullMenuNav} from "../desktop/home/FullMenuNav";
 import {PaymentOptions} from "../desktop/home/PaymentOptions";
 //import {PrivateRoute} from "./PrivateRoute";
 //import { withAuth0 } from "@auth0/auth0-react";
@@ -61,7 +61,11 @@ export class RouteComponent extends React.Component {
                                       component={HomeMain} />
                                 <Route
                                     exact path="/catalogItem/:catalogId/:categoryId?"
-                                    component={CatalogItem} />
+                                    render={() => {
+                                        window.scrollTo(0,0);
+                                        return (<CatalogItem />)
+                                    }}
+                                />
                                 <Route
                                     exact path="/category/:categoryId"
                                     render={() => {

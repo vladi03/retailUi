@@ -5,11 +5,11 @@ import {Link, Paper, Typography} from "@material-ui/core";
 import {PicRatioView} from "pic-ratio-fill";
 import {makeStyles} from "@material-ui/core/styles";
 
+const catalogApi = process.env.CATALOG_API;
 
 const CatalogListComponent = ({siteCategories, categoryId}) => {
     const category = siteCategories.find((cate)=> cate._id === categoryId);
     const classes = useStyle();
-    const catalogApi = process.env.CATALOG_API;
 
     if(category)
     { // noinspection DuplicatedCode
@@ -45,8 +45,10 @@ const CatalogListComponent = ({siteCategories, categoryId}) => {
                                     <Link href={`/#/catalogItem/${catalog._id}/${categoryId}`}>
                                         {catalog.shortDesc}
                                     </Link>
+                                    <span style={{marginLeft: 10}} >${catalog.unitPrice}</span>
                                 </Typography>
-                                <Typography variant="p" >
+                                <Typography variant="body1" >
+                                    {catalog.extraDesc}<br />
                                     {catalog.description}
                                 </Typography>
                             </div>
@@ -79,12 +81,13 @@ const useStyle = makeStyles({
         display: "flex",
         "list-style": "none",
         "padding-left": 5,
+        paddingBottom: 10,
         "flex-flow": "row wrap",
         "justify-content": "space-around"
     },
     item: {
         width: "calc(20% - 10px)",
-        height: 350,
+        height: 355,
         padding:5,
         overflow: "hidden",
         "@media (max-width: 1280px)" : {
@@ -109,6 +112,7 @@ const useStyle = makeStyles({
     },
     itemText: {
         height: 150,
-        paddingLeft: 7
+        paddingLeft: 7,
+        overflow: "auto"
     }
 });
