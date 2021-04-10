@@ -10,7 +10,8 @@ module.exports = {
             {from: './src/manifest.json'},
             {from: './src/sw.js'},
             {from: './src/carouselSlide.css'},
-            {from: './src/darby_logo_wide.jpg'}
+            {from: './src/darby_logo_wide.jpg'},
+            {from: './src/logo3.png'}
         ],
         define: {
             'process.env.AUTH_DOMAIN': JSON.stringify(process.env.AUTH_DOMAIN),
