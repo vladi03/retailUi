@@ -43,6 +43,8 @@
 }
 
 .view-port {
+    text-align: center;
+    display: block;
     background-color: Ivory ;
     overflow:hidden;
     width: 100%;
@@ -82,6 +84,11 @@
 }
 
 @media (max-width: 675px) {
+    .carousel-caption {
+        padding-top:  2px;
+        padding-bottom: 2px;
+    }
+
     .base-class.Active {
         height: 371px;
     }
