@@ -87,7 +87,7 @@
     }
 
     .view-port img {
-        height: 371px;
+        height: 220px;
     }
 
     .carousel {
@@ -98,13 +98,13 @@
         min-height: 220px;
     }
     .carousel.slide {
-        width: 475px;
+        width: 95%;
     }
 }
 
 @media (max-width: 450px) {
     .base-class.Active {
-        height: 138px;
+        height: 220px;
     }
 
     .carousel {
