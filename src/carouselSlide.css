@@ -21,6 +21,7 @@
 .carousel.slide {
     width: 576px;
     margin-left: 10px;
+    display: flex;
 }
 
 .base-class {
@@ -90,7 +91,7 @@
     }
 
     .base-class.Active {
-        height: 371px;
+        height: 220px;
     }
 
     .view-port img {
@@ -106,6 +107,7 @@
     }
     .carousel.slide {
         width: 95%;
+        height: 220px;
     }
 }
 
