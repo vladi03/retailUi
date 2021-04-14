@@ -8,7 +8,7 @@ import {CatalogList} from "./CatalogList";
 import {SiteHeader} from "./SiteHeader";
 import {H1Title,MainArticle} from "./Titles";
 import {makeStyles} from "@material-ui/core/styles";
-import {PicRatioView} from "pic-ratio-fill";
+//import {PicRatioView} from "pic-ratio-fill";
 import {Divider, Typography} from "@material-ui/core";
 import {CategoryList} from "./CategoryList";
 const catalogApi = process.env.CATALOG_API;
@@ -37,14 +37,10 @@ const CatalogItemComponent = ({ catalogs }) => {
                         <MainArticle>{catalog.description}</MainArticle>
                         <MainArticle>{catalog.extraDesc}</MainArticle>
                     </div>
-                    <div>
-                        <PicRatioView
-                            src={`${catalogApi}/catalogApi/api/v1/catalog/file/${image.id}`}
-                            width={"100%"}
-                            height={400}
-                            colorRgb={image.colorRgb}
-                            colorRgbOpposite={image.colorRgbOther}
-                            willFitWidth={false}
+                    <div className={classes.imageContainer}>
+                        <img alt=""
+                             className={classes.imageContainer}
+                             src={`${catalogApi}/catalogApi/api/v1/catalog/file/${image.id}`}
                         />
                     </div>
                 </div>
@@ -60,6 +56,15 @@ const CatalogItemComponent = ({ catalogs }) => {
 export const CatalogItem = connectArray(CatalogItemComponent, [siteModel]);
 
 const useStyle = makeStyles({
+    imageContainer: {
+        overflowX: "auto"
+    },
+    imageContainerZoom: {
+        width: "100%"
+    },
+    itemImage: {
+        maxHeight: 400
+    },
     itemContainer : {
         display: "flex",
         justifyContent: "center",
