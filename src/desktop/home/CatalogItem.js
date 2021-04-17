@@ -9,7 +9,7 @@ import {SiteHeader} from "./SiteHeader";
 import {H1Title,MainArticle} from "./Titles";
 import {makeStyles} from "@material-ui/core/styles";
 //import {PicRatioView} from "pic-ratio-fill";
-import {Divider, Typography} from "@material-ui/core";
+import {Typography} from "@material-ui/core";
 import {CategoryList} from "./CategoryList";
 const catalogApi = process.env.CATALOG_API;
 

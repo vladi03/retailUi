@@ -10,6 +10,7 @@ export const CategoryListComponent = ({siteCategories})=> {
     const classes = useStyle();
     const catalogApi = process.env.CATALOG_API;
 
+    // noinspection JSUnresolvedVariable
     return (
         <Fragment>
             <Typography
@@ -93,9 +94,12 @@ const useStyle = makeStyles({
     container: {
         display: "flex",
         "list-style": "none",
-        "padding-left": 5,
+        "padding-left": 0,
         "flex-flow": "row wrap",
-        "justify-content": "space-around"
+        "justify-content": "space-around",
+        "@media (max-width: 600px)" : {
+            "padding-left": 0,
+        }
     },
     item: {
         width: "calc(25% - 10px)",

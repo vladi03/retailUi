@@ -73,7 +73,7 @@ export const InfoBox = connectArray(InfoBoxComponent, [siteModel]);
 const useStyles = makeStyles({
     mainContainer: {
         marginRight: 5,
-        marginLeft: 10,
+        marginLeft: 5,
         flex: "auto",
         background: "rgb(176 175 178)",
         borderRadius: 10,

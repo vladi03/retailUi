@@ -1,3 +1,5 @@
+// noinspection JSUnresolvedVariable
+
 import React, {Fragment} from "react";
 import {siteModel} from "../../models/siteModel";
 import {connectArray} from "../../utility/helpers";
@@ -38,7 +40,6 @@ const CatalogListComponent = ({siteCategories, categoryId}) => {
                                     colorRgbOpposite={image.colorRgbOther}
                                     willFitWidth={false}
                                 />
-
                             </div>
                             <div className={classes.itemText}>
                                 <Typography variant="h6" style={{color: "#1a8bdf"}} >
