@@ -9,8 +9,10 @@ import {SiteHeader} from "./SiteHeader";
 import {H1Title,MainArticle} from "./Titles";
 import {makeStyles} from "@material-ui/core/styles";
 //import {PicRatioView} from "pic-ratio-fill";
-import {Typography} from "@material-ui/core";
+import {Divider, Typography} from "@material-ui/core";
 import {CategoryList} from "./CategoryList";
+import {InfoBox} from "./InfoBox";
+
 const catalogApi = process.env.CATALOG_API;
 
 const CatalogItemComponent = ({ catalogs }) => {
@@ -49,6 +51,8 @@ const CatalogItemComponent = ({ catalogs }) => {
 
             {categoryId && <CatalogList categoryId={categoryId} />}
             <CategoryList />
+            <InfoBox />
+            <Divider variant="middle" style={{margin: 10}} />
         </div>
     );
 }
@@ -57,12 +61,13 @@ export const CatalogItem = connectArray(CatalogItemComponent, [siteModel]);
 
 const useStyle = makeStyles({
     imageContainer: {
-        /*overflowX: "overlay",*/
+
         borderBottomRightRadius: 10,
         borderTopRightRadius: 10,
         overflow: "hidden",
         marginRight: 10,
-        marginLeft: -10
+        marginLeft: -10,
+        overflowX: "scroll",
     },
     imageContainerZoom: {
         width: "100%"

@@ -7,7 +7,6 @@ import {connectArray} from "../../utility/helpers";
 import {CategoryList} from "./CategoryList";
 import {CatalogList} from "./CatalogList";
 import { Divider } from "@material-ui/core";
-import { Carousel } from "./Carousel";
 import {InfoBox} from "./InfoBox";
 import {useParams} from "react-router-dom";
 
@@ -38,6 +37,8 @@ export const CategorySelectComponent = ({siteDataInitLoaded, onSiteDataInit }) =
             <CatalogList categoryId={categoryId} />
             <Divider variant="middle" />
             <CategoryList />
+            <InfoBox />
+            <Divider variant="middle" style={{margin: 10}} />
         </Fragment>
     );
 };

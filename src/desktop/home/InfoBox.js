@@ -4,6 +4,7 @@ import {connectArray} from "../../utility/helpers";
 import {makeStyles} from "@material-ui/core/styles";
 import {hoursToView} from "../../models/hoursHelper";
 import {H1Title} from "./Titles";
+import {Link, Typography} from "@material-ui/core";
 
 const InfoBoxComponent = ({locations})=> {
     const classes = useStyles();
@@ -18,7 +19,11 @@ const InfoBoxComponent = ({locations})=> {
                 Bedroom suites, bedding, living room suits, coffee and end tables, dinette sets, dining room suits and
                 other related furniture items all at deeply discounted prices. Easy financing and layaway.
             </div>
-
+            <Link href={`#/purchaseOptions`} >
+                <Typography variant="h5" style={{color: "#1a8bdf"}} >
+                    > See Purchase Options
+                </Typography>
+            </Link>
 
             <div className={classes.locationListContainer}>
                 {locations.map((location)=> {
@@ -96,7 +101,7 @@ const useStyles = makeStyles({
     },
     mainArticle : {
         fontSize: 20,
-        marginTop: 15,
+        marginTop: 5,
         "@media (max-width: 700px)": {
             display: "none"
         }

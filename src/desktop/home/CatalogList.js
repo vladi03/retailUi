@@ -120,6 +120,6 @@ const useStyle = makeStyles({
     itemText: {
         height: 150,
         paddingLeft: 7,
-        overflow: "auto"
+        overflow: "scroll"
     }
 });

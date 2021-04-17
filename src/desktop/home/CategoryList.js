@@ -5,10 +5,10 @@ import {makeStyles} from "@material-ui/core/styles";
 import {Paper, Typography, Link} from "@material-ui/core";
 import {PicRatioView} from "pic-ratio-fill";
 //import {Link} from "react-router-dom";
+const catalogApi = process.env.CATALOG_API;
 
 export const CategoryListComponent = ({siteCategories})=> {
     const classes = useStyle();
-    const catalogApi = process.env.CATALOG_API;
 
     // noinspection JSUnresolvedVariable
     return (

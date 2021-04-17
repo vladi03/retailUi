@@ -1,10 +1,10 @@
 import React from "react";
 
-export const PaymentOptions = ()=>{
+export const PurchaseOptions = ()=>{
 
     return (
         <div>
-            <h2>Payment Options</h2>
+            <h2>Purchase Options</h2>
             dsdfsdds
         </div>
     )

@@ -7,7 +7,7 @@ import { GlobalProviders} from "../GlobalProviders";
 //import {initAuthStore} from "../models/accounts/userAuthStore";
 import {HomeMain} from "../desktop/home/HomeMain";
 //import {FullMenuNav} from "../desktop/home/FullMenuNav";
-import {PaymentOptions} from "../desktop/home/PaymentOptions";
+import {PurchaseOptions} from "../desktop/home/PurchaseOptions";
 //import {PrivateRoute} from "./PrivateRoute";
 //import { withAuth0 } from "@auth0/auth0-react";
 //import {setTokenValue, hasToken} from "../models/accounts/userAuthStore";
@@ -20,8 +20,8 @@ import {CategorySelect} from "../desktop/home/CategorySelect";
 // noinspection JSUnusedLocalSymbols
 export class RouteComponent extends React.Component {
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             isMobile: window.innerWidth <= 760,
             errorMessage: "",
@@ -75,8 +75,11 @@ export class RouteComponent extends React.Component {
                                 />
 
                                 <Route
-                                    exact path="/payment"
-                                    component={PaymentOptions}
+                                    exact path="/purchaseOptions"
+                                    render={() => {
+                                        window.scrollTo(0,0);
+                                        return (<PurchaseOptions />)
+                                    }}
                                 />
                             </div>
 
