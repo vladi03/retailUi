@@ -3,7 +3,7 @@ import React from "react";
 import { AppBar, Toolbar, IconButton, Typography,
      Button, TextField, InputAdornment, Link } from "@material-ui/core";
 import { makeStyles} from "@material-ui/core/styles";
-import { Add as AddIcon, Search} from "@material-ui/icons";
+import { Add as AddIcon, Search, ArrowBackIos} from "@material-ui/icons";
 import {SearchTextBox} from "./SearchTextBox";
 import PropTypes from 'prop-types';
 import {useIsMobile} from "../useIsMobile";
@@ -96,6 +96,10 @@ export const AppBarTitleAddSearchComponent =
                 style={{backgroundColor}}
                 position="static">
             <Toolbar variant="dense">
+                {linkUrl && <Link href={linkUrl || "#"} style={{color: "black"}}>
+                    <ArrowBackIos/>
+                </Link>
+                }
                 <Link href={linkUrl || "#"}>
                 {imageUrl && <img src={imageUrl} height={40} />}
                 </Link>

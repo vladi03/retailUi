@@ -9,6 +9,7 @@ import {CatalogList} from "./CatalogList";
 import { Divider } from "@material-ui/core";
 import {InfoBox} from "./InfoBox";
 import {useParams} from "react-router-dom";
+import {SiteHeader} from "./SiteHeader";
 
 
 export const CategorySelectComponent = ({siteDataInitLoaded, onSiteDataInit }) => {
@@ -20,19 +21,7 @@ export const CategorySelectComponent = ({siteDataInitLoaded, onSiteDataInit }) =
     const { categoryId } = useParams();
     return (
         <Fragment>
-            <div style={{backgroundColor:"#101010"}}>
-                <AppBarTitleAddSearch
-                    title=""
-                    LeftIcon={OpenWith}
-                    imageUrl="logo3.png"
-                    backgroundColor={"#626166"}
-                    useBigSearch={false}
-                    onSearchChange={(value) => {
-
-                    }}
-
-                />
-            </div>
+            <SiteHeader url={"#/"} />
 
             <CatalogList categoryId={categoryId} />
             <Divider variant="middle" />

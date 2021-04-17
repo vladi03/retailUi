@@ -6,6 +6,7 @@ import {H1Title, H2Title, MainArticle} from "./Titles";
 import {makeStyles} from "@material-ui/core/styles";
 import {InfoBox} from "./InfoBox";
 import {YesNoLinkDialog} from "./YesNoLinkDialog";
+import {SiteHeader} from "./SiteHeader";
 
 export const PurchaseOptions = ()=>{
     const classes = useStyle();
@@ -17,15 +18,7 @@ export const PurchaseOptions = ()=>{
                              setOpen={setOpen}
                              url={url}
             />
-            <div style={{backgroundColor:"#101010"}}>
-                <AppBarTitleAddSearch
-                    title=""
-                    LeftIcon={OpenWith}
-                    imageUrl="logo3.png"
-                    backgroundColor={"#626166"}
-                    useBigSearch={false}
-                />
-            </div>
+            <SiteHeader url={"#/"} />
             <Typography
                 variant="h5"
                 color="inherit"

@@ -23,7 +23,7 @@ const CatalogItemComponent = ({ catalogs }) => {
 
     return (
         <div>
-            <SiteHeader />
+            <SiteHeader url={"#/"} />
             {catalog &&
             <div>
                 <Typography
