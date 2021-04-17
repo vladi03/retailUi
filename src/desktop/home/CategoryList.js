@@ -40,9 +40,11 @@ export const CategoryListComponent = ({siteCategories})=> {
 
                             </div>
                             <div className={classes.itemText}>
-                                <Typography variant="h5" style={{color: "#1a8bdf"}} >
-                                    {category.category}
-                                </Typography>
+                                <Link href={`#/category/${category._id}`} >
+                                    <Typography variant="h5" style={{color: "#1a8bdf"}} >
+                                        {category.category}
+                                    </Typography>
+                                </Link>
 
                                 {category.catalogList.slice(0,3).map((catalog)=> {
 
@@ -59,8 +61,7 @@ export const CategoryListComponent = ({siteCategories})=> {
                                 })}
 
                                 <Typography variant="h6" style={{color: "#1a8bdf"}} >
-                                    <Link href={`#/category/${category._id}`}
-                                          >
+                                    <Link href={`#/category/${category._id}`} >
                                     Shop all {category.category}
                                     </Link>
                                 </Typography>
@@ -111,7 +112,9 @@ const useStyle = makeStyles({
     itemContainer: {
         //padding: 15,
         height: "calc(100% - 0px)",
-        background: "#f1f3f5"
+        background: "#e1e0e2",
+        borderRadius: 10,
+        overflow: "hidden"
     },
     itemImageBox: {
         width: "100%",
@@ -119,7 +122,7 @@ const useStyle = makeStyles({
         overflow: "hidden",
         display:"inline-block",
         backgroundColor: "#afcdee",
-        padding:0
+        padding:0,
     },
     itemText: {
         height: 150,

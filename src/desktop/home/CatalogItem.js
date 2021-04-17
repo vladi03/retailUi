@@ -39,14 +39,14 @@ const CatalogItemComponent = ({ catalogs }) => {
                     </div>
                     <div className={classes.imageContainer}>
                         <img alt=""
-                             className={classes.imageContainer}
+                             style={{height: "100%"}}
                              src={`${catalogApi}/catalogApi/api/v1/catalog/file/${image.id}`}
                         />
                     </div>
                 </div>
             </div>
             }
-            <Divider variant="middle" />
+
             {categoryId && <CatalogList categoryId={categoryId} />}
             <CategoryList />
         </div>
@@ -57,7 +57,12 @@ export const CatalogItem = connectArray(CatalogItemComponent, [siteModel]);
 
 const useStyle = makeStyles({
     imageContainer: {
-        overflowX: "auto"
+        /*overflowX: "overlay",*/
+        borderBottomRightRadius: 10,
+        borderTopRightRadius: 10,
+        overflow: "hidden",
+        marginRight: 10,
+        marginLeft: -10
     },
     imageContainerZoom: {
         width: "100%"
@@ -87,9 +92,13 @@ const useStyle = makeStyles({
     },
     itemDescriptionContainer: {
         maxWidth: 400,
-        paddingRight: 10,
+        borderBottomLeftRadius: 10,
+        borderTopLeftRadius: 10,
+        padding: 15,
+        backgroundColor: "#e1e0e2",
         "@media (max-width: 1000px)": {
-            marginBottom: 10
+            marginBottom: 10,
+            maxWidth: "none"
         }
     }
 });

@@ -104,15 +104,17 @@ const useStyle = makeStyles({
     itemContainer: {
         //padding: 15,
         height: "calc(100% - 0px)",
-        background: "#f1f3f5",
+        background: "#e1e0e2",
+        borderRadius: 10,
+        overflow: "hidden"
     },
     itemImageBox: {
         width: "100%",
         height: 200,
         overflow: "hidden",
         display:"inline-block",
-        backgroundColor: "#afcdee",
-        padding:0
+
+        padding:0,
     },
     itemText: {
         height: 150,

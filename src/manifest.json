@@ -1,6 +1,6 @@
 {
-    "name": "Online Retail Store",
-    "short_name": "Retail Store",
+    "name": "Darby Furniture",
+    "short_name": "Darby",
 	"scope": "/",
 	"start_url": "/index.html",
 	"service_worker": "sw.js",
