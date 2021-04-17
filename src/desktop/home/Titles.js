@@ -8,6 +8,13 @@ export const H1Title = ({children})=> {
     );
 }
 
+export const H2Title = ({children})=> {
+    const classes = useStyles();
+    return (
+        <div className={classes.h2Title}>{children}</div>
+    );
+}
+
 export const MainArticle = ({children})=> {
     const classes = useStyles();
     return (
@@ -18,6 +25,11 @@ export const MainArticle = ({children})=> {
 const useStyles = makeStyles({
     h1Title: {
         fontSize: 28,
+        fontWeight: 900,
+        color: "rgb(26, 139, 223)"
+    },
+    h2Title: {
+        fontSize: 20,
         fontWeight: 900,
         color: "rgb(26, 139, 223)"
     },

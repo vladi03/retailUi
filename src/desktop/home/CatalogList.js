@@ -1,5 +1,4 @@
 // noinspection JSUnresolvedVariable
-
 import React, {Fragment} from "react";
 import {siteModel} from "../../models/siteModel";
 import {connectArray} from "../../utility/helpers";
