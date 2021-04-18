@@ -83,7 +83,7 @@ const useStyles = makeStyles({
         background: "rgb(176 175 178)",
         borderRadius: 10,
         padding: "15px 0 0 15px",
-        "@media (max-width: 1040px)": {
+        "@media (max-width: 1020px)": {
             marginTop: 15
         },
         "@media (max-width: 600px)": {
@@ -102,6 +102,9 @@ const useStyles = makeStyles({
     mainArticle : {
         fontSize: 20,
         marginTop: 5,
+        "@media (max-width:1130px) and (min-width:1020px)": {
+            display: "none"
+        },
         "@media (max-width: 700px)": {
             display: "none"
         }

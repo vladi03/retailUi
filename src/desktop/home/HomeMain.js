@@ -1,7 +1,5 @@
 import React, {Fragment, useEffect} from "react";
-import {AppBarTitleAddSearch} from "../../utility/components/AppBarTitle";
 import {makeStyles} from "@material-ui/core/styles";
-import {OpenWith} from "@material-ui/icons";
 import {siteModel} from "../../models/siteModel";
 import {connectArray} from "../../utility/helpers";
 import {CategoryList} from "./CategoryList";
@@ -37,7 +35,7 @@ const useStyles = makeStyles({
     titleBar: {
         display: "flex",
         alignItems: "stretch",
-        "@media (max-width: 1100px)": {
+        "@media (max-width: 1020px)": {
             display: "contents"
         }
     }
