@@ -36,7 +36,7 @@ const CatalogListComponent = ({siteCategories, categoryId}) => {
                                     width={"100%"}
                                     height={200}
                                     colorRgb={image.colorRgb}
-                                    colorRgbOpposite={image.colorRgbOther}
+                                    colorRgbOpposite={image.colorRgb}
                                     willFitWidth={false}
                                 />
                             </div>

@@ -35,7 +35,7 @@ export const CategoryListComponent = ({siteCategories})=> {
                                     width={"100%"}
                                     height={250}
                                     colorRgb={category.image.colorRgb}
-                                    colorRgbOpposite={category.image.colorRgbOther}
+                                    colorRgbOpposite={category.image.colorRgb}
                                     willFitWidth={false}
                                 />
 
