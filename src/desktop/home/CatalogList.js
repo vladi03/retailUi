@@ -48,8 +48,11 @@ const CatalogListComponent = ({siteCategories, categoryId}) => {
                                     <span style={{marginLeft: 10}} >${catalog.unitPrice}</span>
                                 </Typography>
                                 <Typography variant="body1" >
-                                    {catalog.extraDesc}<br />
-                                    {catalog.description}
+                                    {catalog.extraDesc &&
+                                    <span>{catalog.extraDesc}<br /></span>
+                                    }
+                                    {catalog.description}<br />
+                                    Model# : {catalog.modelNumber}
                                 </Typography>
                             </div>
                         </Paper>
@@ -119,6 +122,6 @@ const useStyle = makeStyles({
     itemText: {
         height: 150,
         paddingLeft: 7,
-        overflow: "scroll"
+        overflowY: "scroll"
     }
 });

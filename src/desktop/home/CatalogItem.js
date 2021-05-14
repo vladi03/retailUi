@@ -38,6 +38,7 @@ const CatalogItemComponent = ({ catalogs }) => {
                         <H1Title>${catalog.unitPrice}</H1Title>
                         <MainArticle>{catalog.description}</MainArticle>
                         <MainArticle>{catalog.extraDesc}</MainArticle>
+                        <MainArticle>Model# : {catalog.modelNumber}</MainArticle>
                     </div>
                     <div className={classes.imageContainer}>
                         <img alt=""
