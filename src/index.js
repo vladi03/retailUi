@@ -4,6 +4,7 @@ import {render} from 'react-dom'
 import RouteConfig from  "./route/RouteConfig";
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import { grey, yellow } from '@material-ui/core/colors';
+import {createSiteHit} from "./models/siteMessages";
 //import { Auth0Provider } from "@auth0/auth0-react";
 
 const muiTheme = createMuiTheme({
@@ -21,8 +22,21 @@ const muiTheme = createMuiTheme({
     }
 });
 
+const Loader = () => {
+    const hitDateStr = localStorage.getItem('hitDateMs');
+    if(hitDateStr === null ||
+        (Date.now() - Number(hitDateStr)) > 864000000
+    ) {
+        localStorage["hitDateMs"] = Date.now();
+        console.log("createHit");
+        createSiteHit().then();
+    }
+
+    return(<MuiThemeProvider theme={muiTheme}><RouteConfig/></MuiThemeProvider>);
+}
+
 render(
-        <MuiThemeProvider theme={muiTheme}><RouteConfig /></MuiThemeProvider>
+    <Loader/>
     ,
     document.querySelector('#app'));
 

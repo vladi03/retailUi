@@ -35,3 +35,27 @@ export const getSiteData = async () => {
         });
 
 };
+
+///catalogApi/api/v1/hit/sites/60a1734e08d51c1bbc35b93e
+export const createSiteHit = async () => {
+    const catalogApi = process.env.CATALOG_API;
+    //const userDomain = process.env.DOMAIN;
+    const url = `${catalogApi}/catalogApi/api/v1/hit/sites/60a1734e08d51c1bbc35b93e`;
+    // noinspection DuplicatedCode
+    const payloadGeneric = {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json; charset=utf-8"
+        }
+    };
+
+    // noinspection JSUnusedLocalSymbols
+    return fetch(url, payloadGeneric)
+        .then(handleResponse()).then((result) => {
+            console.log("hit complete");
+            return true
+        }).catch(() => {
+            console.log("hit error");
+            return false;
+        });
+};
