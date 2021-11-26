@@ -31,6 +31,7 @@ const CatalogListComponent = ({siteCategories, categoryId}) => {
                     <li className={classes.item} key={catalog._id} >
                         <Paper className={classes.itemContainer}>
                             <div className={classes.itemImageBox}>
+                                <Link href={`#/catalogItem/${catalog._id}/${categoryId}`}>
                                 <PicRatioView
                                     src={`${catalogApi}/catalogApi/api/v1/catalog/file/${image.id}`}
                                     width={"100%"}
@@ -39,6 +40,7 @@ const CatalogListComponent = ({siteCategories, categoryId}) => {
                                     colorRgbOpposite={image.colorRgb}
                                     willFitWidth={false}
                                 />
+                                </Link>
                             </div>
                             <div className={classes.itemText}>
                                 <Typography variant="h6" style={{color: "#1a8bdf"}} >
