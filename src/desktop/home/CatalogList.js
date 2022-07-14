@@ -31,7 +31,17 @@ const CatalogListComponent = ({siteCategories, categoryId}) => {
                     <li className={classes.item} key={catalog._id} >
                         <Paper className={classes.itemContainer}>
                             <div className={classes.itemImageBox}>
-                                <Link href={`#/catalogItem/${catalog._id}/${categoryId}`}>
+                                <Link href={`#/catalogItem/${catalog._id}/${categoryId}`}
+                                      style={{position: "relative"}}
+                                >
+                                    { catalog.sale && catalog.sale.enabled &&
+                                        <div
+                                            className={classes.catSale}
+                                            style={{
+                                                "backgroundColor": `rgb(${catalog.sale.color[0]},${catalog.sale.color[1]}, ${catalog.sale.color[2]})`
+                                            }}
+                                        >${catalog.sale?.price}</div>
+                                    }
                                 <PicRatioView
                                     src={`${catalogApi}/catalogApi/api/v1/catalog/file/${image.id}`}
                                     width={"100%"}
@@ -112,6 +122,19 @@ const useStyle = makeStyles({
         background: "#e1e0e2",
         borderRadius: 10,
         overflow: "hidden"
+    },
+    catSale: {
+        position: "absolute",
+        //transform: "translate(10%, 15%)",
+        zIndex: 9,
+        padding: 15,
+        //font: "800 16px Arial",
+        "border-bottom-right-radius": 10,
+        "border-bottom-left-radius": 10,
+        "border-top-left-radius": 10,
+        color: "white",
+        right:0,
+        transform: "rotate(30deg)"
     },
     itemImageBox: {
         width: "100%",
