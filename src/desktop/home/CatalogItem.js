@@ -35,6 +35,14 @@ const CatalogItemComponent = ({ catalogs }) => {
                 </Typography>
                 <div className={classes.itemContainer}>
                     <div className={classes.itemDescriptionContainer}>
+                        { catalog.sale && catalog.sale.enabled &&
+                            <div
+                                className={classes.catSale}
+                                style={{
+                                    "backgroundColor": `rgb(${catalog.sale.color[0]},${catalog.sale.color[1]}, ${catalog.sale.color[2]})`
+                                }}
+                            >Sale : ${catalog.sale?.price}</div>
+                        }
                         <H1Title>${catalog.unitPrice}</H1Title>
                         <MainArticle>{catalog.description}</MainArticle>
                         <MainArticle>{catalog.extraDesc}</MainArticle>
@@ -97,6 +105,7 @@ const useStyle = makeStyles({
         borderRadius: 15
     },
     itemDescriptionContainer: {
+        position: "relative",
         maxWidth: 400,
         borderBottomLeftRadius: 10,
         borderTopLeftRadius: 10,
@@ -106,5 +115,18 @@ const useStyle = makeStyles({
             marginBottom: 10,
             maxWidth: "none"
         }
+    },
+    catSale: {
+        position: "absolute",
+        //transform: "translate(10%, 15%)",
+        zIndex: 9,
+        padding: 15,
+        //font: "800 16px Arial",
+        "border-bottom-right-radius": 10,
+        "border-bottom-left-radius": 10,
+        "border-top-left-radius": 10,
+        color: "white",
+        right:10,
+        transform: "rotate(0deg)"
     }
 });
