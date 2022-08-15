@@ -15,11 +15,19 @@ import {InfoBox} from "./InfoBox";
 
 const catalogApi = process.env.CATALOG_API;
 
-const CatalogItemComponent = ({ catalogs }) => {
+const CatalogItemComponent = ({ catalogs, site }) => {
     const { catalogId, categoryId } = useParams();
     const classes = useStyle();
     const catalog = catalogs.find((cat) => cat._id === catalogId);
     const image = catalog && catalog.images && catalog.images[0];
+
+    const salesBackgroundRgbValue = site.salesBackgroundColor?.length > 2 ?
+        `rgb(${site.salesBackgroundColor[0]},${site.salesBackgroundColor[1]}, ${site.salesBackgroundColor[2]})`:
+        "rgb(255,255,255)";
+
+    const salesFontRgbValue = site.salesFontColor.length > 2 ?
+        `rgb(${site.salesFontColor[0]},${site.salesFontColor[1]}, ${site.salesFontColor[2]})`:
+        "rgb(255,255,255)";
 
     return (
         <div>
@@ -39,7 +47,8 @@ const CatalogItemComponent = ({ catalogs }) => {
                             <div
                                 className={classes.catSale}
                                 style={{
-                                    "backgroundColor": `rgb(${catalog.sale.color[0]},${catalog.sale.color[1]}, ${catalog.sale.color[2]})`
+                                    "backgroundColor": salesBackgroundRgbValue,
+                                    "color" : salesFontRgbValue
                                 }}
                             >Sale : ${catalog.sale?.price}</div>
                         }
@@ -120,6 +129,8 @@ const useStyle = makeStyles({
         position: "absolute",
         //transform: "translate(10%, 15%)",
         zIndex: 9,
+        fontSize: 28,
+        fontWeight: 900,
         padding: 15,
         //font: "800 16px Arial",
         "border-bottom-right-radius": 10,
@@ -127,6 +138,7 @@ const useStyle = makeStyles({
         "border-top-left-radius": 10,
         color: "white",
         right:10,
+        top: 0,
         transform: "rotate(0deg)"
     }
 });

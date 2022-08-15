@@ -8,9 +8,17 @@ import {makeStyles} from "@material-ui/core/styles";
 
 const catalogApi = process.env.CATALOG_API;
 
-const CatalogListComponent = ({siteCategories, categoryId}) => {
+const CatalogListComponent = ({siteCategories, categoryId, site}) => {
     const category = siteCategories.find((cate)=> cate._id === categoryId);
     const classes = useStyle();
+
+    const salesBackgroundRgbValue = site.salesBackgroundColor?.length > 2 ?
+        `rgb(${site.salesBackgroundColor[0]},${site.salesBackgroundColor[1]}, ${site.salesBackgroundColor[2]})`:
+        "rgb(255,255,255)";
+
+    const salesFontRgbValue = site.salesFontColor.length > 2 ?
+        `rgb(${site.salesFontColor[0]},${site.salesFontColor[1]}, ${site.salesFontColor[2]})`:
+        "rgb(255,255,255)";
 
     if(category)
     { // noinspection DuplicatedCode
@@ -38,7 +46,8 @@ const CatalogListComponent = ({siteCategories, categoryId}) => {
                                         <div
                                             className={classes.catSale}
                                             style={{
-                                                "backgroundColor": `rgb(${catalog.sale.color[0]},${catalog.sale.color[1]}, ${catalog.sale.color[2]})`
+                                                "backgroundColor": salesBackgroundRgbValue,
+                                                "color": salesFontRgbValue
                                             }}
                                         >${catalog.sale?.price}</div>
                                     }

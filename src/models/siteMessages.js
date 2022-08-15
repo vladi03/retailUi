@@ -1,5 +1,36 @@
 import {handleResponse} from "../utility/helpers";
 
+export const getSiteParams = async () => {
+    const catalogApi = process.env.CATALOG_API;
+    const userDomain = process.env.DOMAIN;
+    //
+    const url = `${catalogApi}/catalogApi/api/v1/site/${userDomain}`;
+    const payloadGeneric = {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json; charset=utf-8"
+        }
+    };
+
+    return fetch(url, payloadGeneric)
+        .then(handleResponse()).then((result) => {
+            return {
+                site: result && result.length > 0 ? result[0] : { },
+                siteLoading: false,
+                siteHasError: false
+            };
+        }).catch((error) => {
+            return {
+                site: {
+                    salesBackgroundColor: [0, 255, 255],
+                    salesFontColor: [0,0,0]},
+                siteLoading: false,
+                siteLoadError: error.message || error,
+                siteHasError: true
+            };
+        });
+};
+
 export const getSiteData = async () => {
     const catalogApi = process.env.CATALOG_API;
     const userDomain = process.env.DOMAIN;
