@@ -13,6 +13,7 @@ module.exports = {
             {from: './src/carousel.css'},
             {from: './src/darby_logo_wide.jpg'},
             {from: './src/1stFranklin31.png'},
+            {from: './src/1stFranklin32.jpg'},
             {from: './src/progressive.png'},
             {from: './src/logo3.png'}
         ],
