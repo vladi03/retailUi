@@ -55,6 +55,14 @@ const InfoBoxComponent = ({locations})=> {
                                         {location.phonePublic}
                                     </div>
                                 </div>
+                                { location.email && location.email.length > 0 &&
+                                    <div className={`${classes.locationLine} ${classes.hideMobile}`}>
+                                        <div className={classes.fieldTitle}>Email:</div>
+                                        <div className={classes.fieldValue}>
+                                            {location.email}
+                                        </div>
+                                    </div>
+                                }
                                 <div className={classes.locationLine}>
                                     <div className={classes.fieldTitle}>Hours: </div>
                                     <div className={classes.fieldValue}>

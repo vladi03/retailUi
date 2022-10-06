@@ -34,8 +34,8 @@ export const getSiteParams = async () => {
 export const getSiteData = async () => {
     const catalogApi = process.env.CATALOG_API;
     const userDomain = process.env.DOMAIN;
-
-    const url = `${catalogApi}/catalogApi/api/v1/site/domain/${userDomain}`;
+    const url = "https://us-central1-our-pursuit-92702.cloudfunctions.net/site/domain/darbyfurnitureoutlet.com";
+    const urlReal = `${catalogApi}/catalogApi/api/v1/site/domain/${userDomain}`;
     const payloadGeneric = {
         method: "GET",
         headers: {

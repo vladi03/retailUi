@@ -30,7 +30,7 @@ export const PurchaseOptions = ()=>{
                 <div className={classes.imageContainer}>
                     <img alt=""
                          style={{width: "100%"}}
-                         src={`1stFranklin32.png`}
+                         src={`1stFranklin32.jpg`}
                     />
                 </div>
                 <div className={classes.itemDescriptionContainer}>
