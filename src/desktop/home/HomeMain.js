@@ -10,10 +10,13 @@ import {InfoBox} from "./InfoBox";
 import {SiteHeader} from "./SiteHeader";
 
 export const HomeMainComponent = ({siteDataInitLoaded, onSiteDataInit }) => {
-    useEffect(()=> {
-        if(!siteDataInitLoaded)
-            onSiteDataInit();
+    /*
+    useEffect(async()=> {
+        if(!siteDataInitLoaded) {
+            //await onSiteDataInit("HomeMain");
+        }
     });
+     */
     const classes = useStyles();
     return (
         <Fragment>

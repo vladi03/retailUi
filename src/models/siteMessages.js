@@ -43,15 +43,15 @@ export const getSiteData = async () => {
             //"Authorization": `Bearer ${token}`
         }
     };
-
+    console.log("calling site/domain");
     return fetch(url, payloadGeneric)
         .then(handleResponse()).then((result) => {
-            console.log("result");
-            console.log(result);
+
             return {
                 categories: result.categories,
                 catalogs: result.catalogs,
                 locations: result.locations,
+                site: result?.sites?.length > 0 ? result.sites[0] : { },
                 siteDataLoading: false,
                 siteDataHasError: false,
                 siteDataLoadError: false

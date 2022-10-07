@@ -13,10 +13,13 @@ import {SiteHeader} from "./SiteHeader";
 
 
 export const CategorySelectComponent = ({siteDataInitLoaded, onSiteDataInit }) => {
+    console.log("-----------");
+    /*
     useEffect(()=> {
         if(!siteDataInitLoaded)
             onSiteDataInit();
     });
+     */
     const classes = useStyles();
     const { categoryId } = useParams();
     return (

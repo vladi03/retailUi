@@ -22,11 +22,11 @@ export const createModel = () => ({
     onSiteDataInit
 });
 
-const onSiteDataInit = async ()=> {
+const onSiteDataInit = async (callFrom)=> {
     provider.setState({"siteDataInitLoaded": true});
     const result = await getSiteData();
-    const {site} = await getSiteParams();
-    result.site = site;
+    //const {site} = await getSiteParams();
+    //result.site = site;
     result.siteCategories = createSiteCategoriesModel(result,3);
     provider.setState(result);
 };

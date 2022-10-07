@@ -2,12 +2,12 @@ import './index.css'
 import React from 'react'
 import {render} from 'react-dom'
 import RouteConfig from  "./route/RouteConfig";
-import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import { MuiThemeProvider, createTheme } from '@material-ui/core/styles';
 import { grey, yellow } from '@material-ui/core/colors';
 import {createSiteHit} from "./models/siteMessages";
 //import { Auth0Provider } from "@auth0/auth0-react";
 
-const muiTheme = createMuiTheme({
+const muiTheme = createTheme({
     typography: {
         useNextVariants: true,
     },
