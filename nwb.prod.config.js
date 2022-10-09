@@ -15,7 +15,8 @@ module.exports = {
             {from: './src/1stFranklin31.png'},
             {from: './src/1stFranklin32.jpg'},
             {from: './src/progressive.png'},
-            {from: './src/logo3.png'}
+            {from: './src/logo3.png'},
+            {from: './src/CNAME'}
         ],
         define: {
             'process.env.AUTH_DOMAIN': JSON.stringify(process.env.AUTH_DOMAIN),

@@ -59,7 +59,7 @@ const InfoBoxComponent = ({locations})=> {
                                     <div className={`${classes.locationLine}`}>
                                         <div className={classes.fieldTitle}>Email:</div>
                                         <div className={classes.fieldValue}>
-                                            <a href="mailto:{location.email}">
+                                            <a href={`mailto:${location.email}`}>
                                                 @{location.locationName}
                                             </a>
                                         </div>
