@@ -56,15 +56,6 @@ export const PurchaseOptions = ()=>{
                     <MainArticle>**90-day Purchase Options: Standard agreement offers 12 months to ownership. 90-day purchase options cost more than the retailer’s cash price (except 3-month option in CA). To purchase early call 877-898-1970.**</MainArticle>
                     <MainArticle>*The initial payment (plus tax) is charged at leasts signing. Remaining lease payemnt will be determined upon item selection.*</MainArticle>
                     <p>
-                        <Button className={classes.appButton}
-                                variant="contained" color="primary"
-                                onClick={() => {
-                                    setUrl("https://approve.me/s/darbyfurnitureoutlet/29207");
-                                    setOpen(true)
-                                }}
-                        >
-                            Jonesboro Store Application »
-                        </Button>
 
                         <Button className={classes.appButton}
                                 variant="contained" color="primary"
@@ -73,7 +64,7 @@ export const PurchaseOptions = ()=>{
                                     setOpen(true)
                                 }}
                         >
-                            Griffin Store Application »
+                            Apply Now »
                         </Button>
 
                     </p>
