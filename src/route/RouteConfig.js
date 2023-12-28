@@ -2,7 +2,7 @@ import React, {Fragment} from 'react';
 import { HashRouter, Route } from 'react-router-dom';
 import { GlobalProviders} from "../GlobalProviders";
 //import {getLoginRoute} from "./history";
-//import {FullMenuNav} from "../desktop/home/FullMenuNav";
+import {FullMenuNav} from "../desktop/home/FullMenuNav";
 //import { LoggedOut } from "../desktop/accounts/LoggedOut";
 //import {initAuthStore} from "../models/accounts/userAuthStore";
 import {HomeMain} from "../desktop/home/HomeMain";
@@ -54,7 +54,7 @@ export class RouteComponent extends React.Component {
                     status={0}
                 />
                     <HashRouter>
-
+                        <FullMenuNav>
                             <div>
                                 <Route
                                       exact path="/"
@@ -82,7 +82,7 @@ export class RouteComponent extends React.Component {
                                     }}
                                 />
                             </div>
-
+                        </FullMenuNav>
                     </HashRouter>
                 </GlobalProviders>
             </Fragment>

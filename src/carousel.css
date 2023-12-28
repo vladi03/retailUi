@@ -34,7 +34,7 @@
 
 @media (max-width: 675px) {
     .carousel-inner {
-        width: calc(100vw - 10px);
+        width: calc(100vw - 25px);
         height: 90vw;
     }
 
