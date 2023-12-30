@@ -9,7 +9,8 @@
     "test": "mocha  -r esm --recursive ./test",
     "deploy:docs": "gh-pages -d dist",
     "start": "nwb serve-react-app --copy-files NODE_ENV=development --config ./nwb.dev.config.js",
-    "start-prod": "nwb serve-react-app --copy-files NODE_ENV=prod --config ./nwb.prod.config.js"
+    "start-prod": "nwb serve-react-app --copy-files NODE_ENV=prod --config ./nwb.prod.config.js",
+    "set-node-version": "nvm use 16"
   },
   "repository": {
     "type": "git",
