@@ -1,7 +1,148 @@
-<!doctype html><html lang="english"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta http-equiv="x-ua-compatible" content="ie=edge"><link rel="manifest" href="manifest.json"><title>Darby 1.1.6</title><link href="carousel.css?v101" rel="stylesheet"><meta name="description" content=""><link rel="icon" type="image/png" href="retail-shop-flat-icon_small.jpg"><script>if ('serviceWorker' in navigator) {
-          navigator.serviceWorker.register('sw.js').then(function(registration) {
-              console.log('ServiceWorker registration successful!');
-          }).catch(function(err) {
-              console.log('ServiceWorker registration failed: ', err);
-          });
-      }</script><link href="app.6d6ccef3.css" rel="stylesheet"></head><body><div id="app" style="background-color: #fafbff;padding-bottom: 20px;"></div><script>!function(e){function r(r){for(var n,l,f=r[0],i=r[1],a=r[2],c=0,s=[];c<f.length;c++)l=f[c],Object.prototype.hasOwnProperty.call(o,l)&&o[l]&&s.push(o[l][0]),o[l]=0;for(n in i)Object.prototype.hasOwnProperty.call(i,n)&&(e[n]=i[n]);for(p&&p(r);s.length;)s.shift()();return u.push.apply(u,a||[]),t()}function t(){for(var e,r=0;r<u.length;r++){for(var t=u[r],n=!0,f=1;f<t.length;f++){var i=t[f];0!==o[i]&&(n=!1)}n&&(u.splice(r--,1),e=l(l.s=t[0]))}return e}var n={},o={1:0},u=[];function l(r){if(n[r])return n[r].exports;var t=n[r]={i:r,l:!1,exports:{}};return e[r].call(t.exports,t,t.exports,l),t.l=!0,t.exports}l.m=e,l.c=n,l.d=function(e,r,t){l.o(e,r)||Object.defineProperty(e,r,{enumerable:!0,get:t})},l.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},l.t=function(e,r){if(1&r&&(e=l(e)),8&r)return e;if(4&r&&"object"==typeof e&&e&&e.__esModule)return e;var t=Object.create(null);if(l.r(t),Object.defineProperty(t,"default",{enumerable:!0,value:e}),2&r&&"string"!=typeof e)for(var n in e)l.d(t,n,function(r){return e[r]}.bind(null,n));return t},l.n=function(e){var r=e&&e.__esModule?function(){return e.default}:function(){return e};return l.d(r,"a",r),r},l.o=function(e,r){return Object.prototype.hasOwnProperty.call(e,r)},l.p="";var f=window.webpackJsonp=window.webpackJsonp||[],i=f.push.bind(f);f.push=r,f=f.slice();for(var a=0;a<f.length;a++)r(f[a]);var p=i;t()}([]);</script><script src="vendor.5000769e.js"></script><script src="app.0bdc3f90.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	      <link rel="icon"
+          type="image/png"
+          href="retail-shop-flat-icon_small.jpg">
+    <title>Darby</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+	<style>
+		#head {
+			height: 40px;
+			background-color:rgb(98, 97, 102);
+		}
+		
+		#head-img {
+			height: 40px;
+			margin: 10px;
+		}
+		
+		.text-match {
+			color: rgb(98, 97, 102)
+		}
+	</style>
+</head>
+<body class="bg-gray-100" style="margin-top: -10px;" >
+
+<div id="head" ><image id="head-img" src="logo3.png" /></div>
+
+<h1 class="text-3xl font-bold text-match text-center mt-8">Home of Affordable Furniture</h1>
+
+<div id="catalog" class=""></div>
+
+<script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+<script type="text/babel">
+
+    const GoodBye = () => (
+        <div className="flex items-center justify-between p-6 bg-white shadow-md rounded-lg transition-transform transform hover:scale-105 md:col-span-2" >
+            <div className="flex items-center">
+                
+                <div className="text-left">
+                    <h3 className="text-xl font-semibold text-gray-800"> 👋 Good Bye</h3>
+                    After serving the South Metro area for more than 60 years, Darby's Furniture will be closing on February 15th 2025.
+					<br />
+					We want to thank those of you that allowed our family to serve yours at our Hapeville, Jonesboro and Sunnyside locations. We have loved serving you and been truly blessed throughout the years to see multiple generations of families furnish their homes through us.
+                </div>
+            </div>
+        </div>
+    );
+	
+	
+	const GoodByeImg = () => (
+        <div className="flex items-center justify-between p-6 bg-white shadow-md rounded-lg transition-transform transform hover:scale-105">
+            <div className="flex items-center">      
+                <div className="text-left">
+                    <img src="goodbye.jpg" />
+                </div>
+            </div>
+        </div>
+    );
+	
+	const Sofa = () => (
+        <div className="flex items-center justify-between p-6 bg-white shadow-md rounded-lg transition-transform transform hover:scale-105">
+            <div className="flex items-center">
+				<div>
+					<h3 className="text-xl font-semibold text-gray-800" style={{display: "flex", "alignitems": "center", gap: "8px"}}>
+						<svg width="24px" height="24px" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path fill="#000000" d="M112 73c-13.75 0-24.214 4.87-33.047 13.271-8.832 8.402-15.755 20.6-20.414 34.575-5.887 17.661-7.953 38.064-6.887 56.111a57.246 57.246 0 0 1 2.461-.187c8.38-.405 16.317 1.094 23.494 4.234 14.355 6.28 25.436 18.27 34.057 32.28 15.104 24.543 23.187 55.746 24.96 80.585 114.097-14.223 124.655-14.223 238.753 0 1.772-24.84 9.855-56.042 24.959-80.586 8.62-14.009 19.702-25.999 34.057-32.28 7.875-3.444 16.67-4.898 25.955-4.046 1.066-18.047-1-38.45-6.887-56.111-4.659-13.976-11.582-26.173-20.414-34.575C424.214 77.87 413.75 73 400 73zM56.969 194.502c-.686-.008-1.38.006-2.082.04-5.621.284-11.8 1.978-18.862 5.509-23.413 11.707-26.349 65.687 14.82 79.41l4.505 1.502L86.79 391h338.42l31.44-110.037 4.504-1.502c41.17-13.723 38.234-67.703 14.82-79.41-14.121-7.061-24.722-6.775-34.367-2.555-9.645 4.22-18.564 13.23-25.943 25.22C400.906 246.7 393 282 393 304v10.195l-10.117-1.265c-128-16-125.766-16-253.766 0L119 314.195V304c0-22-7.906-57.3-22.664-81.283-7.38-11.991-16.298-21.001-25.943-25.22-4.22-1.847-8.624-2.94-13.424-2.995zM83.727 409l-23.272 23.271c11.994 3.239 33.75 3.763 42.545-1.666 3.272-4.695 6.903-14.536 10.438-21.605zm314.836 0c1.494 6.017 6.952 19.12 10.437 21.605 13.2 5.463 29.904 5.774 42.545 1.666L428.273 409z"/></svg> 
+						Sofa & Loveseats
+					</h3>
+					<img src="sofa.jpg" />
+				</div>
+            </div>
+        </div>
+    );
+	
+	const Bed = () => (
+        <div className="flex items-center justify-between p-6 bg-white shadow-md rounded-lg transition-transform transform hover:scale-105">
+            <div className="flex items-center">
+				<div>
+					<h3 className="text-xl font-semibold text-gray-800" style={{display: "flex", "alignitems": "center", gap: "8px"}}> 
+
+<svg fill="#000000" width="24px" height="24px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg"><path d="M5 10C3.347656 10 2 11.347656 2 13L2 26.8125C3.296875 25.6875 4.9375 24.777344 7 24.0625L7 20C7 17.339844 11.542969 17 15.5 17C19.457031 17 24 17.339844 24 20L24 22C24.335938 21.996094 24.65625 22 25 22C25.34375 22 25.664063 21.996094 26 22L26 20C26 17.339844 30.542969 17 34.5 17C38.457031 17 43 17.339844 43 20L43 24.03125C45.058594 24.742188 46.691406 25.671875 48 26.8125L48 13C48 11.347656 46.652344 10 45 10 Z M 25 24C5.90625 24 -0.015625 27.53125 0 37L50 37C50.015625 27.46875 44.09375 24 25 24 Z M 0 39L0 50L7 50L7 46C7 44.5625 7.5625 44 9 44L41 44C42.4375 44 43 44.5625 43 46L43 50L50 50L50 39Z"/>
+</svg>
+						Bedroom Suites
+					</h3>
+					<img src="bed.jpg" />
+				</div>
+            </div>
+        </div>
+    );
+
+	const Kitchen = () => (
+        <div className="flex items-center justify-between p-6 bg-white shadow-md rounded-lg transition-transform transform hover:scale-105">
+            <div className="flex items-center">
+				<div>
+					<h3 className="text-xl font-semibold text-gray-800" style={{display: "flex", "alignitems": "center", gap: "8px"}}> 
+<svg fill="#000000" width="24px" height="24px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" ><path d="M12.597656 4.0644531C10.66763 3.9727769 9.3584389 6.2503883 10.369141 7.8808594L13.859375 13.681641L7.3671875 33.191406 A 1.50015 1.50015 0 0 0 7.3632812 33.205078C5.82015 38.005532 9.4617177 43 14.503906 43L33.496094 43C38.538283 43 42.179854 38.00553 40.636719 33.205078 A 1.50015 1.50015 0 0 0 40.632812 33.191406L34.462891 14.650391 A 1.50015 1.50015 0 0 0 34.560547 14.560547L37.6875 11.433594C38.138623 11.785314 38.707718 12.286991 39.328125 13.0625C40.645287 14.708953 42 17.333333 42 21.5 A 1.50015 1.50015 0 1 0 45 21.5C45 16.666667 43.354713 13.291047 41.671875 11.1875C39.989037 9.083953 38.169922 8.1582031 38.169922 8.1582031 A 1.50015 1.50015 0 0 0 36.439453 8.4394531L34.011719 10.867188L34.011719 9.2695312C34.011719 7.5114839 32.681931 6.0079302 30.939453 5.7949219C21.065914 4.5881894 15.316239 4.1935705 12.597656 4.0644531 z M 13.431641 7.1523438C16.233238 7.2987804 21.292493 7.636844 30.576172 8.7714844C30.829694 8.8024764 31.011719 9.0035787 31.011719 9.2695312L31.011719 12L16.347656 12L13.431641 7.1523438 z M 16.582031 15L31.417969 15L34.412109 24L13.587891 24L16.582031 15 z M 12.589844 27L35.410156 27L37.78125 34.125C38.726516 37.06988 36.58921 40 33.496094 40L14.503906 40C11.41079 40 9.2734836 37.06988 10.21875 34.125C10.21875 34.125 10.21875 34.123047 10.21875 34.123047L12.589844 27 z"/></svg>
+						Dining Sets & Servers
+					</h3>
+					<img src="kitchen.jpg" />
+				</div>
+            </div>
+        </div>
+    );
+
+    const LessonCard = ({ lessonNum, title, link }) => (
+        <div className="flex items-center justify-between p-6 bg-white shadow-md rounded-lg transition-transform transform hover:scale-105">
+            <div className="flex items-center">
+                <div className="text-4xl text-green-500 mr-4">🎓</div>
+                <div className="text-left">
+                    <h3 className="text-xl font-semibold text-gray-800">{title}</h3>
+                    <a href={link} className="text-blue-500 hover:underline mt-2 block" target="_blank" rel="noopener noreferrer">Watch Video</a>
+                </div>
+            </div>
+        </div>
+    );
+
+    const Catalog = ({ lessons }) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto p-4">
+           <GoodByeImg /> <GoodBye /> <Sofa /> <Bed /> <Kitchen />
+        </div>
+    );
+
+    class App extends React.Component {
+        state = {
+            lessons: []
+        };
+
+        componentDidMount() {
+            fetch('videos_list_titles.json')
+                .then(response => response.json())
+                .then(data => this.setState({ lessons: data }));
+        }
+
+        render() {
+            return this.state.lessons.length > 0 ? <Catalog lessons={this.state.lessons} /> : <div>Loading...</div>;
+        }
+    }
+
+    ReactDOM.render(<App />, document.getElementById('catalog'));
+</script>
+
+</body>
+</html>
