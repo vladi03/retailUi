@@ -131,9 +131,7 @@
         };
 
         componentDidMount() {
-            fetch('videos_list_titles.json')
-                .then(response => response.json())
-                .then(data => this.setState({ lessons: data }));
+            this.setState({ lessons: [{}] })
         }
 
         render() {
